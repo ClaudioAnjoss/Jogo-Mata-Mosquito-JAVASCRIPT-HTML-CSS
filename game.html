@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Mosquito</title>
+
+    <script src="jogo.js"></script>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body onresize="recuperarTamanhoPagina()">
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="painel">
+                    <div class="pontos-de-vida">
+                        <img id="v1" src="imagens/coracao_cheio.png" alt="">
+                        <img id="v2" src="imagens/coracao_cheio.png" alt="">
+                        <img id="v3" src="imagens/coracao_cheio.png" alt="">
+                    </div>
+                    <div class="cronometro">
+                        Tempo Restante : <br>
+                        <span id="cronometro"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById('cronometro').innerHTML = tempo
+
+        var criarMosquito = setInterval(function () {
+            criandoMosquitoPosicaoAleatoria()
+        }, tempoMosquito);
+    </script>
+</body>
+
+</html>
